@@ -27,3 +27,6 @@ class menu:
             self.button_idx = len(self.buttons) - 1
         self.buttons[self.button_idx].selected = True
 
+    def click():
+        exec(self.buttons[self.button_idx].bind)
+        
