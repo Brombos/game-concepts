@@ -1,17 +1,23 @@
-
+import menupy
 
 
 class shop:
-    text_buttons = []
+    shop = menupy.menu()
+
+    def set_buttons(self,buttons):
+        shop.buttons = buttons
+        shop.init()
+        
     def default_setup():
-        buy = button()
-        sell = button()
-        talk = button()
+        buy = menupy.button()
+        sell = menupy.button()
+        talk = menupy.button()
         
         buy.name = "Buy"
         sell.name = "Sell"
         talk.name = "Talk"
-    def set_buttons(buttons):
-        text_buttons = buttons
+        set_buttons([buy,sell,talk])
     
         
+tem_shop = shop()
+tem_shop.default_setup()
